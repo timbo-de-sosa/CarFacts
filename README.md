@@ -11,8 +11,7 @@ To run the API, simply clone the repo and run `docker-compose up -d` to start ev
 ## Testing
 Since there is no business logic happening, this repo only contains integration tests. Follow these steps to run the tests.
 1. `docker-compose up -d`
-2. `cd test`
-3. `npm run test`
+2. `sh runTests.sh`
 
 ## Wishlist
 If this were a real environment, the following changes would most likely take place:
