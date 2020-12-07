@@ -1,0 +1,41 @@
+TODO:
+get repo set up DONE
+get postgres set up DONE
+hydrate postgres db DONE
+write get many route DONE
+write get single route DONE
+get docker set up
+write wrapper routes
+write integration tests
+include test about sql injection
+
+
+
+
+docker run -d --name cars-db -p 5432:5432 -e 'POSTGRES_PASSWORD=postgres' postgres
+
+
+
+docker kill $(docker ps -q)
+docker system prune
+docker volume prune
+docker rmi $(docker images -q)
+
+
+
+ docker kill $(docker ps -q)
+
+
+
+
+docker run --name cars-db --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -d postgres
+
+
+docker stop $(docker ps -qa) && docker system prune -af --volumes
+
+
+
+winpty docker exec -it dataservice //bin//sh
+
+
+docker-compose down -v && docker rmi carfacts_dataservice && docker-compose up

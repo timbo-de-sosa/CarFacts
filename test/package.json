@@ -1,0 +1,35 @@
+{
+  "name": "CarFacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "mocha -r ts-node/register index.ts"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.14",
+    "chai": "^4.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timbo-de-sosa/CarFacts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timbo-de-sosa/CarFacts/issues"
+  },
+  "homepage": "https://github.com/timbo-de-sosa/CarFacts#readme",
+  "devDependencies": {
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^14.14.10",
+    "@types/node-fetch": "^2.5.7",
+    "mocha": "^8.2.1",
+    "ts-node": "^9.1.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.2"
+  }
+}

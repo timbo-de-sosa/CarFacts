@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres
+    container_name: postgresql
+    ports:
+      - "5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    restart: always
+  dataservice:
+    container_name: dataservice
+    build:
+      context: ./dataService
+      dockerfile: Dockerfile
+    env_file:
+      - develop.env
+    ports:
+      - "8081"
+  internalapi:
+    container_name: internalapi
+    build:
+      context: ./internalApi
+      dockerfile: Dockerfile
+    env_file:
+      - develop.env
+    ports:
+      - "8080:8080"
